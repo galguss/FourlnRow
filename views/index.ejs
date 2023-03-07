@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="styles/indexStyle.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<bory>
+
+    <table>
+        <% for(let r = 1; r <= 6; r++){ %>
+        <tr>
+            <% for(let c = 1; c <= 7; c++){ %>
+                <td id="<%= r %><%= c %>"></td>
+            <% } %>  
+        </tr>
+        <% } %>
+    </table>
+
+    <script>
+        function SetTile(pos,plyr){
+            document.getElementById(pos).classList.add(plyr);
+        }
+        SetTile(11,"p1");
+        SetTile(13,"p2");
+    </script>
+    
+</bory>
+</html>
