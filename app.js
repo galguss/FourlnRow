@@ -33,9 +33,6 @@ router.get('/GetMove/:p/:c',function(req,res){
 });
 router.get('/', (req, res) => {        //get requests to the root ("/") will route here
       cnt++;
-      if(cnt > 2){
-        cnt = 1;
-      }
       res.render("index", {
       timesShown: cnt,
     });
